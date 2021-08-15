@@ -1,0 +1,76 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #282626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    font-family:cursive ;
+    width: 450px;
+    height: 90vh;
+    border-radius: 20px;
+    transform: translate(0%, 3vh);
+    background: linear-gradient(45deg, #030303, #282626);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem;
+    color:#fff;
+}
+
+.app .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app .top .city-container .city {
+                line-height: 1.4;
+                padding:5px 15px;
+                letter-spacing: 1px;
+                border-radius: 5px;
+                font-size: 2rem;
+}
+
+.app .middle .icon-container .icon {
+              
+             margin-bottom:1rem;
+             font-size: 3rem;
+}
+
+.app .bottom {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+}
+
+
+.app .bottom .degree-container {
+    cursor: pointer;
+}
+.app .bottom .degree-container .degree {
+               display: inline;
+               font-size: 5rem;
+               
+               
+}
+
+.app .bottom .degree-container .degree-unit {
+                          font-size: 4rem;
+                          font-weight: 300;
+                          
+                         
+}

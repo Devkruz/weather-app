@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./main.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+
+  <div class="app">
+
+    <div class="top">
+
+        <div class="city-container">
+            <p class=" city">
+                -
+            </p>
+        </div>
+
+        <div class=" country-container">
+             <p class=" country">
+                 -
+             </p>
+        </div> 
+
+    </div>
+
+    <div class="middle">
+
+        <div class="icon-container">
+            <canvas id="icon" class="icon" width="128" height="128"></canvas>
+            <p class="icon-details">
+                -
+            </p>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+
+        <div class="geo-details">
+
+          <div>
+            <i class="fas fa-wind"></i>
+            <p style = "display: inline;" class="wind">
+                -
+            </p>
+            <span>mph</span>
+          </div>
+            
+        
+            <div>
+               <i class="fal fa-water"></i>
+                <p style = "display: inline;" class="humidity">
+                    -
+                </p>
+                <span>%</span>
+            </div>
+           
+            
+        </div>
+
+        <div class="degree-container">
+             <h1 class="degree">
+                 - 
+             </h1>
+             
+             <span class="degree-unit">
+                     C
+                 </span>
+        </div>
+
+    </div>
+
+  </div>    
+    
+<script src="./skycons.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

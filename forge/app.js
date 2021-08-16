@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+    //Declaration
      let lat;
      let long;
      let itCelcius = true;
@@ -12,7 +13,7 @@ window.addEventListener("load", () => {
      const degreeUnit = document.querySelector(".degree-unit");
      const wind = document.querySelector(".wind");
      const humidity = document.querySelector(".humidity");
-
+     //Api Configuration Settings
      const apiconfig = {
         "method": "GET",
         "headers": {
@@ -20,17 +21,21 @@ window.addEventListener("load", () => {
             "x-rapidapi-host": "yahoo-weather5.p.rapidapi.com"
         }
     }
-     
+     //Checking if Location is Enabled on the browser
      if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(res => {
+             //Getting the geolocation of the user
           lat = res.coords.latitude;
           long = res.coords.longitude;
-          const api = `https://yahoo-weather5.p.rapidapi.com/weather?lat=${lat}&long=${long}&format=json&u=f`;   
-           
+          //Embedding the geolocation details i got from the user into the API
+          const api = `https://yahoo-weather5.p.rapidapi.com/weather?lat=${lat}&long=${long}&format=json&u=c`;   
+           //Fetching for the API
           fetch(api, apiconfig)
+                   //Converting the data i recieve into jason
                         .then(response => {
                             return response.json();
                         })
+                        //Extracting & Displaying the needed data to the user
                         .then(data => {
                              const condition = data.current_observation.condition;
                              const location = data.location;
@@ -41,13 +46,13 @@ window.addEventListener("load", () => {
                              console.log(data);
                              degree.textContent = temperature;
                              city.textContent = cities;
-                             country.textContent = countries;
+                             country.textContent = timezone_id;
                              iconDetails.textContent = text;
                              wind.textContent = winds;
                              humidity.textContent = humidities;
                              skycons.add("icon", text);
                              skycons.play();
-
+                             //Toggling the temperature units once the user clicks it
                              degreeContainer.addEventListener('click', () => {
                                
                                 if (itCelcius) {
@@ -64,20 +69,16 @@ window.addEventListener("load", () => {
                             })
 
                         })
+                        //Cathing any error that occures from the api
                         .catch(err => {
                             console.log(err)
                         })
-                        
-                 
-                
-                    
-                
-                
-                
                       
             });
-     }else {
+     }
+     else {
          alert("Enable Location For This Site To Work Properly")
      }
 });
 
+alert("Enable Location For This Site To Work Properly")

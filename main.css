@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -14,7 +16,7 @@ body {
 }
 
 .app {
-    font-family:cursive ;
+    font-family: 'Roboto', sans-serif;;
     width: 450px;
     height: 90vh;
     border-radius: 20px;
@@ -43,11 +45,23 @@ body {
                 font-size: 2rem;
 }
 
+.app .top .country-container .country {
+                 font-size: 1.1rem;
+                 font-weight: 600;
+}
+
 .app .middle .icon-container .icon {
               
              margin-bottom:1rem;
              font-size: 3rem;
 }
+
+
+.app .middle .icon-container .icon-details {
+                      font-size: 1.5rem;
+                      font-weight: 600;
+}
+
 
 .app .bottom {
      width: 100%;
